@@ -1,0 +1,61 @@
+.container {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+    background-color:lightcyan;
+    overflow: hidden;
+  }
+  
+  .buttonBack {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    height: 50px;
+    width: 50px;
+    color: rgb(211, 199, 199);
+    outline: transparent;
+    background-size: 100%, 100%;
+    border-radius: 50%;
+    border-color: transparent;
+    /* border: 1px solid black; */
+    background-color: transparent;
+  }
+  
+  .buttonNext {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    height: 50px;
+    width: 50px;
+    color: rgb(211, 199, 199);
+    outline: transparent;
+    background-size: 100%, 100%;
+    border-radius: 50%;
+    border-color: transparent;
+    /* border: 1px solid black; */
+    background-color: transparent;
+  }
+  
+  .buttonNext:hover {
+    color: gray;
+    background-color: #5bc0de;
+  }
+  .buttonNext:focus{
+    outline: none !important;
+  }
+  .buttonBack:hover {
+    color: gray;
+    background-color: #5bc0de;
+  }
+  .buttonBack:focus{
+    outline: none !important;
+  }
+  
+  .image{
+    position: absolute;
+  opacity: 0.5;
+  
+  }
+  
