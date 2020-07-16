@@ -15,6 +15,7 @@ const useStyles = makeStyles({
         maxWidth: 430,
         display: "block",
         margin: "auto",
+        marginBottom: 20
         // height: 400
     },
     media: {
