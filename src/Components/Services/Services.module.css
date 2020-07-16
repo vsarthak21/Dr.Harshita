@@ -1,0 +1,72 @@
+.h1{
+    font-family: Tahoma;
+    font-weight: bolder;
+    color:  #5bc0de;
+    text-align: center;
+    padding-top: 1%;
+    text-shadow: 1px 1px gray;
+  }
+
+  .h2{
+    font-family: Tahoma;
+    font-weight: bolder;
+    color: gray;
+    text-align: center;
+    padding-top: 1%;
+  }
+
+
+.middle{
+    height: 60%;
+    display: block;
+    margin: auto;
+    margin-top: 20%;
+    padding: 5%;
+    width: 70%;
+}
+.icon{
+    border:0px solid transparent;
+    border-radius: 50%;
+    padding: 5px;
+    width: 90px;
+    display: inline-block;
+    background-color: #a43f21;
+    filter: invert(100%);
+}
+
+.icon:hover{
+    background-color: #817571;
+    filter: invert(100%);
+}
+
+.leftCol{ 
+    align-items: flex-end;
+}
+
+.rowCard{
+    width: 18rem;
+    display: block;
+    margin: auto;
+}
+.hrline{
+    border-top: 4px solid;
+    border-color: #5bc0de;
+    width: 4%;
+    border-radius: 2px;
+    margin-top: 0px;
+}
+
+@media only screen and (max-width: 600px) {
+    .leftCol{ 
+        align-items: flex-end;
+        right: 10%;
+    }
+    .RightCol{
+        left: 10%;
+    }
+
+    .middle{
+        height: 70%;
+        width: inherit;
+    }
+}

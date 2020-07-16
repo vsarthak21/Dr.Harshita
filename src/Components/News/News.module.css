@@ -1,0 +1,21 @@
+.news{
+    margin-top: 2%;
+    padding-bottom: 2%;
+    background-color: #EEF4F4;
+}
+.h1{
+    font-family: Tahoma;
+    font-weight: bolder;
+    color:  #5bc0de;
+    text-align: center;
+    padding-top: 1%;
+    text-shadow: 1px 1px gray;
+  }
+
+  .hrline{
+    border-top: 4px solid;
+    border-color: #5bc0de;
+    width: 4%;
+    border-radius: 2px;
+    margin-top: 0px;
+}

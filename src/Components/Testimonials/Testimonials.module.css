@@ -1,0 +1,85 @@
+.h1{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bolder;
+    color: #5bc0de;
+    margin-top: 3%;
+    text-shadow: 1px 1px gray;
+}
+
+
+.hrline{
+    border-top: 4px solid;
+    border-color: #5bc0de;
+    width: 8%;
+    border-radius: 2px;
+    margin-top: 0px;
+}
+
+.rowCard{
+    width: 22rem;
+    height: 18rem;
+    display: block;
+    margin: auto;
+    border: 0px;
+}
+
+.buttonBack { 
+    height: 30px;
+    width: 30px;
+    color: rgb(211, 199, 199);
+    background-size: 100%, 100%;
+    border-radius: 20%;
+    border-color:  #5bc0de;
+    background-color: #5bc0de;
+    opacity: 0.6;
+    margin-right: 0.5%;
+    box-shadow: none;
+  }
+  
+  .buttonNext {
+    
+    height: 30px;
+    width: 30px;
+    color: rgb(211, 199, 199);
+    background-size: 100%, 100%;
+    border-radius: 20%;
+    border-color:  #5bc0de;
+    background-color: #5bc0de;
+    opacity: 0.6;
+    margin-left: 0.5%;
+    box-shadow: none;
+
+  }
+
+  .buttonNext:hover {
+    color: gray;
+    background-color: #5bc0de;
+    opacity: 1;
+
+  }
+  .buttonNext:focus{
+    outline: none !important;
+
+  }
+  .buttonBack:hover {
+    color: gray;
+    background-color: #5bc0de;
+    opacity: 1;
+
+  }
+  .buttonBack:focus{
+    outline: none !important;
+  }
+
+  @media only screen and (max-width: 600px) {
+    
+    .buttonBack {
+      display: none;
+    }
+    
+    .buttonNext {
+      display: none;
+     
+    }
+  }
+    

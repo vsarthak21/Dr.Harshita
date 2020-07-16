@@ -1,33 +1,98 @@
-import React from 'react';
+import React,  { useState} from 'react';
 import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
-
+import { Link, animateScroll as scroll } from "react-scroll";
 const Navibar = (props) => {
-
+    const [expanded, setExpanded] = useState(false);
+    const offset = window.matchMedia('(max-width: 600px)').matches ? -300 : -75 
     return (
-        <Navbar sticky="top" bg="info" expand="lg" >
-            <Navbar.Brand href="#home">Dr.ABCDEF</Navbar.Brand>
-            <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar expanded={expanded} sticky="top" bg="info" expand="lg" variant="dark" >
+            <Navbar.Brand as={"div"} style={{cursor:"pointer"}}><Link
+                            activeClass="active"
+                            to="home"
+                            spy={true}
+                            smooth={true}
+                            offset={offset}
+                            duration={500}
+                        >
+                            Dr. Harshita
+                        </Link></Navbar.Brand>
+            <Navbar.Toggle aria-controls="basic-navbar-nav" onClick={() => setExpanded(expanded ? false : "expanded")} />
             <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="mr-auto">
-                    <Nav.Link href="#home">Home</Nav.Link>
-                    <Nav.Link href="#about">About</Nav.Link>
-                    <Nav.Link href="#services">Services and Treatments</Nav.Link>
-                    <Nav.Link href="#testimonials">Testimonials</Nav.Link>
-                    <Nav.Link href="#new">Whats New?</Nav.Link>
-                    <Nav.Link href="#contact">Contact Us</Nav.Link>
-
-                    {/* <NavDropdown title="Quick Links" id="basic-nav-dropdown">
-                        <NavDropdown.Item href="#action/3.1">Services and Treatments</NavDropdown.Item>
-                        <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
-                        <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-                        {/* <NavDropdown.Divider />
-                        <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item> */}
-                    {/* </NavDropdown> */} 
+                    <Nav.Link as={"div"}style={{cursor:"pointer"}} >
+                        <Link
+                            activeClass="active"
+                            to="home"
+                            spy={true}
+                            smooth={true}
+                            offset={offset}
+                            duration={500}
+                            onClick={() => setExpanded(false)}
+                        >
+                            Home
+                        </Link></Nav.Link>
+                    <Nav.Link as={"div"}style={{cursor:"pointer"}}>
+                        <Link
+                            activeClass="active"
+                            to="about"
+                            spy={true}
+                            smooth={true}
+                            offset={offset}
+                            duration={500}
+                            onClick={() => setExpanded(false)}
+                        >
+                            About
+                        </Link>
+                    </Nav.Link>
+                    <Nav.Link as={"div"}style={{cursor:"pointer"}} >
+                    <Link
+                            activeClass="active"
+                            to="services"
+                            spy={true}
+                            smooth={true}
+                            offset={offset}
+                            duration={500}
+                            onClick={() => setExpanded(false)}
+                        >
+                            Services & Treatments
+                        </Link></Nav.Link>
+                    <Nav.Link as={"div"}style={{cursor:"pointer"}} >
+                    <Link
+                            activeClass="active"
+                            to="testimonials"
+                            spy={true}
+                            smooth={true}
+                            offset={offset}
+                            duration={500}
+                            onClick={() => setExpanded(false)}
+                        >
+                            Testimonials
+                        </Link></Nav.Link>
+                    <Nav.Link as={"div"}style={{cursor:"pointer"}} >
+                    <Link
+                            activeClass="active"
+                            to="news"
+                            spy={true}
+                            smooth={true}
+                            offset={offset}
+                            duration={500}
+                            onClick={() => setExpanded(false)}
+                        >
+                            Whats New?
+                        </Link></Nav.Link>
+                    <Nav.Link as={"div"}style={{cursor:"pointer"}} >
+                    <Link
+                            activeClass="active"
+                            to="contact"
+                            spy={true}
+                            smooth={true}
+                            offset={offset}
+                            duration={500}
+                            onClick={() => setExpanded(false)}
+                        >
+                            Contact Us
+                        </Link></Nav.Link>
                 </Nav>
-                {/* <Form inline>
-                    <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-                    <Button variant="outline-success">Search</Button>
-                </Form> */}
             </Navbar.Collapse>
         </Navbar >
     )

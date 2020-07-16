@@ -5,7 +5,7 @@
     background-color:lightcyan;
     overflow: hidden;
   }
-  
+ 
   .buttonBack {
     position: absolute;
     top: 50%;
@@ -54,8 +54,76 @@
   }
   
   .image{
-    position: absolute;
-  opacity: 0.5;
-  
+    position: absolute center;
+    opacity: 0.5;
+  }
+
+  .content{
+    align-content: center;
+    padding-top: 10%;
+  }
+
+  .h1{
+    font-family: Tahoma;
+    font-weight: bolder;
+    color: black;
+  }
+  .h3{
+    font-family: Tahoma;
+    color: black;
+  }
+
+  @media only screen and (max-width: 600px) {
+    .slider{
+      height: 200px;
+      width: 100%;
+    }
+    .container {
+      /* padding: 1%; */
+      position: relative;
+      max-width: 100%;
+      height: 200px;
+      margin: auto;
+      background-color:lightcyan;
+      overflow: hidden;
+    }
+    
+    .buttonBack {
+      display: none;
+    }
+    
+    .buttonNext {
+      display: none;
+     
+    }
+    
+    .image{
+      position: absolute;
+      padding:1%;
+      opacity: 0.5;
+      height: 200px;
+      max-width: 100%;
+      margin: auto;
+    }
+
+    .content{
+      align-content: center;
+      padding-top: 0;
+      padding-left: 5%;
+    }
+
+    .h1{
+      font-size: 1.75rem;
+      font-family: Tahoma;
+      font-weight: bolder;
+    }
+    .h3{
+      font-size: 1rem;
+      font-family: Tahoma;
+
+    }
+    .bookButton{
+      font-size: x-small;
+    }
   }
   
