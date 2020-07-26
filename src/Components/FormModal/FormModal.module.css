@@ -1,5 +1,6 @@
 .modalBorder{
     border: transparent;
+    max-width: 85%;
 }
 .modalHeader{
     background-color: #17a2b8;

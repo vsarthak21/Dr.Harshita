@@ -38,7 +38,7 @@ const FormModal = (props) => {
     const [selectedName, setSelectedName] = useState("");
     const [selectedPhone, setSelectedPhone] = useState("");
     const [selectedAge, setSelectedAge] = useState("");
-    const [selectedDate, setSelectedDate] = useState(new Date().toLocaleString());
+    const [selectedDate, setSelectedDate] = useState("");
     const [error, setError] = useState("");
     const onChange = (event) => {
         const phoneRegex = "^[0-9]{10}$";
@@ -61,7 +61,7 @@ const FormModal = (props) => {
     }
 
     const onSubmit = () => {
-        console.log({ "Name": selectedName, "Age": selectedAge, "Phone No.": selectedPhone, "Slot": selectedDate }, moment(selectedDate).format('DD-MM-YYYY, h:mm:ss a'))
+        //console.log({ "Name": selectedName, "Age": selectedAge, "Phone No.": selectedPhone, "Slot": selectedDate }, moment(selectedDate).format('DD-MM-YYYY, h:mm:ss a'))
 
         if (!firebase.apps.length) {
             firebase.initializeApp(firebaseConfig);
@@ -78,6 +78,7 @@ const FormModal = (props) => {
             size="lg"
             aria-labelledby="contained-modal-title-vcenter"
             centered
+            dialogClassName={cls.modalBorder}
         >
             <Modal.Header closeButton className={cls.modalHeader}>
                 <Modal.Title id="contained-modal-title-vcenter">
@@ -119,11 +120,12 @@ const FormModal = (props) => {
                         />
                         <MuiPickersUtilsProvider utils={DateFnsUtils}>
                             <KeyboardDateTimePicker
+                                autoOk
                                 required
                                 variant="inline"
                                 ampm={true}
                                 label="Slot"
-                                value={selectedDate}
+                                defaultValue=""
                                 onChange={handleDateChange}
                                 disablePast
                                 format="yyyy/MM/dd HH:mm"
@@ -133,7 +135,7 @@ const FormModal = (props) => {
             </Modal.Body>
             <Modal.Footer>
                 {success ? <Button onClick={props.onHide} variant={"info"}>Okay</Button> :
-                    <Button disabled={!(selectedName && selectedPhone && selectedAge)} onClick={onSubmit} variant={"info"}>Submit</Button>
+                    <Button disabled={!(selectedName && selectedPhone && selectedAge && selectedDate)} onClick={onSubmit} variant={"info"}>Submit</Button>
                 }
             </Modal.Footer>
         </Modal>
