@@ -1,8 +1,13 @@
 .modalBorder{
     border: transparent;
-    max-width: 85%;
 }
 .modalHeader{
     background-color: #17a2b8;
     color:whitesmoke;
+}
+
+@media only screen and (max-width: 600px) {
+    .modalBorder{
+      width: 85%;
+    }
 }
