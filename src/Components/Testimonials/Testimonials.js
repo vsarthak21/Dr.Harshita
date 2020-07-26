@@ -40,7 +40,7 @@ class Testimonials extends React.Component {
             <div id="testimonials">
                 <h1 className={classes.h1}>Testimonials</h1>
                 <hr className={classes.hrline} ></hr>
-                <Container>
+                <Container className={classes.cont}>
 
                     <CarouselProvider
                         visibleSlides={window.matchMedia('(max-width: 600px)').matches ? 1 : 3 }
