@@ -1,7 +1,7 @@
 import React from 'react';
 const Literals = {
 about :[
-    "Dr. Harshita is an excellent physiotherapist with 2 years of hands-on experiance in orthopaedics, neuro and sports rehab.\
+    "Dr. Harshita is an excellent physiotherapist specialised in orthopaedics, neuro and sports rehab.\
     She has done her BPT from Amity Institute of Physiotherapy, Amity Univrsity, Noida and current pursuing her Masters in Physiotherapy\
     in Sport Rehabilitation from Manav Rachna University, Haryana.",
     "She has undergone regorous training experiance in renowned medical facilities:",
