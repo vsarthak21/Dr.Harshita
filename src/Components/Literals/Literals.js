@@ -1,7 +1,7 @@
 import React from 'react';
 const Literals = {
 about :[
-    "Dr. Harshita is an excellent physiotherapist with 2 years of experiance in orthopaedics, neuro and sports rehab.\
+    "Dr. ABCDE (PT) is an excellent physiotherapist with 2 years of hands-on experiance in orthopaedics, neuro and sports rehab.\
     She has done her BPT from Amity Institute of Physiotherapy, Amity Univrsity, Noida and current pursuing her Masters in Physiotherapy\
     in Sport Rehabilitation from Manav Rachna University, Haryana.",
     "She has undergone regorous training experiance in renowned medical facilities:",
@@ -10,7 +10,7 @@ about :[
     "Hindu Rao Hospital",
     "A+ Orthopaedic and Sports Med Center",
     "R.K Hospital, Karkardooma",
-    "She has treated patients from almost all common ***** conditions. Dr. Harshita is specialized in treatment of following conditions:",
+    "She has treated patients from almost all common body conditions and pains. Dr. Harshita is specialized in treatment of following conditions:",
     "CVA",
     "Vestibular Rehablitation such as vertigo",
     "PIVD",
@@ -41,8 +41,8 @@ testimonials:[
       "Rating": 5
     },
     {
-      "Full Name": "Dr. Neetu Bhardwaj",
-      "Association": "Former Colleague",
+      "Full Name": "Neetu Bhardwaj",
+      "Association": "Patient",
       "Feedback": "Just one word to define her- Superb!",
       "Rating": 5
     },
@@ -71,8 +71,8 @@ testimonials:[
       "Rating": 5
     },
     {
-      "Full Name": "Sh.Rajinder kumar kapoor",
-      "Association": "Former Colleague",
+      "Full Name": "Rajinder kumar kapoor",
+      "Association": "Patient",
       "Feedback": "Excellent, always concerned and cooperative.",
       "Rating": 5
     }

@@ -14,7 +14,7 @@ const Navibar = (props) => {
                             offset={offset}
                             duration={500}
                         >
-                            Dr. Harshita
+                            Dr. Harshita (PT)
                         </Link></Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" onClick={() => setExpanded(expanded ? false : "expanded")} />
             <Navbar.Collapse id="basic-navbar-nav">

@@ -5,7 +5,24 @@ import 'pure-react-carousel/dist/react-carousel.es.css';
 import classes from "./Carousel.module.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleRight, faAngleLeft } from '@fortawesome/free-solid-svg-icons';
+import FormModal from '../FormModal/FormModal';
 class Carousel extends React.Component {
+    constructor(props){
+        super(props);
+        this.state={
+            showModal:false
+        }
+
+    }
+
+    renderModal(){
+        this.setState(()=>{return{showModal:true}})
+    }
+
+    closeModal(){
+        this.setState(()=>{return{showModal:false}})
+    }
+
     render() {
         return (
             <div id={"home"}>
@@ -31,7 +48,7 @@ class Carousel extends React.Component {
                                         <h3 className={classes.h3}>Don't worry, take appointment now!</h3>
                                     </Row>
                                     <Row>
-                                        <Button variant="outline-info" >Book Now</Button>
+                                        <Button variant="outline-info" onClick={this.renderModal.bind(this)} >Book Now</Button>
                                     </Row>
                                     </Container>
                                 </Image>
@@ -46,7 +63,7 @@ class Carousel extends React.Component {
                                         <h3 className={classes.h3}>Begin the journey of pain free life now!</h3>
                                     </Row>
                                     <Row>
-                                        <Button variant="info" >Book Now</Button>
+                                        <Button variant="info" onClick={this.renderModal.bind(this)}>Book Now</Button>
                                     </Row>
                                     </Container>
                                 </Image>
@@ -61,7 +78,7 @@ class Carousel extends React.Component {
                                         <h3 className={classes.h3}>We will have you in the field soon.</h3>
                                     </Row>
                                     <Row>
-                                        <Button variant="outline-info" >Book Now</Button>
+                                        <Button variant="outline-info" onClick={this.renderModal.bind(this)}>Book Now</Button>
                                     </Row>
                                     </Container>
                                 </Image>
@@ -70,6 +87,7 @@ class Carousel extends React.Component {
                         </Slider>
                         <ButtonBack className={classes.buttonBack}><FontAwesomeIcon icon={faAngleLeft} /></ButtonBack>
                         <ButtonNext className={classes.buttonNext}><FontAwesomeIcon icon={faAngleRight} /></ButtonNext>
+                        <FormModal show={this.state.showModal} onHide={this.closeModal.bind(this)}/>
                     </div>
 
                 </CarouselProvider>
